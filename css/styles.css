@@ -11732,3 +11732,17 @@ html {
     left: -2vw;
   }
 }
+
+/* ===== FIX BADGE MOBILE ===== */
+.badge {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media (max-width: 576px) {
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.6em 0.8em;
+    }
+}
