@@ -11746,3 +11746,157 @@ html {
         padding: 0.6em 0.8em;
     }
 }
+
+/* ================================
+   RESUME - MOBILE PREMIUM OVERRIDES
+   ================================ */
+
+/* 1) Header Experience (título + botão) */
+@media (max-width: 576px) {
+  .resume-header,
+  .d-flex.align-items-center.justify-content-between.mb-4 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .resume-header .btn,
+  .d-flex.align-items-center.justify-content-between.mb-4 .btn {
+    width: 100% !important;
+  }
+}
+
+/* 2) Botão fluido */
+.btn.w-100.w-sm-auto {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .btn.w-100.w-sm-auto {
+    width: auto;
+  }
+}
+
+/* 3) Cards mais compactos no mobile */
+.card-body {
+  padding: 1.25rem;
+}
+@media (min-width: 768px) {
+  .card-body {
+    padding: 3rem; /* equivalente ao p-5 do template */
+  }
+}
+
+/* 4) Grid interno dos cards (melhor leitura) */
+.resume-card .row,
+.card .row.align-items-center {
+  --bs-gutter-x: 1rem;
+}
+.resume-card .col,
+.card .col.text-center {
+  width: 100%;
+}
+
+/* 5) Skills responsivo (1 / 2 / 3 colunas) */
+.skills-grid,
+.row.row-cols-1.row-cols-md-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 576px) {
+  .skills-grid,
+  .row.row-cols-1.row-cols-md-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .skills-grid,
+  .row.row-cols-1.row-cols-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 6) Chips (opcional – se trocar div por span.skill-chip) */
+.skill-chip {
+  display: inline-block;
+  background: #f1f3f5;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* 7) Timeline (mobile-first) */
+.timeline {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #e0e0e0;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+.timeline-dot {
+  position: absolute;
+  left: -31px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #1e30f3, #e21e80);
+  border-radius: 50%;
+}
+.timeline-content {
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+.timeline-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1e30f3;
+}
+.timeline-content h5 {
+  margin: 6px 0 2px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.timeline-content small {
+  display: block;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+.timeline-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 8) Tipografia/spacing gerais no mobile */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  h1.display-5 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 9) Evitar estouro horizontal */
+body {
+  overflow-x: hidden;
+}
